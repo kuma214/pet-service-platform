@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko" layout:decorate="~{layout}" xmlns:layout="http://www.w3.org/1999/xhtml"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disease Page</title>
+  <!-- Bootstrap CSS -->
+  <style>
+    body {
+      font-family: 'GmarketSansMedium', sans-serif;
+    }
+    .form-container {
+      margin: 50px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+<div layout:fragment="content" class="container my-3">
+  <h1>상품 상세 보기</h1>
+
+  <div class="form-container">
+    <h3>상품 정보</h3>
+
+    <div class="mb-3">
+      <label class="form-label">상품 이름</label>
+      <p class="form-control-plaintext" th:text="${product.name}"></p>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">상품 브랜드</label>
+      <p class="form-control-plaintext" th:text="${product.maker}"></p>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">상품 타입</label>
+      <p class="form-control-plaintext" th:text="${product.type}"></p>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">상품 상세 타입</label>
+      <p class="form-control-plaintext" th:text="${product.subtype}"></p>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">상품 가격</label>
+      <p class="form-control-plaintext" th:text="${product.price} + ' 원'"></p>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">동물 선택</label>
+      <p class="form-control-plaintext" th:text="${product.animal.name}"></p>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">원산지</label>
+      <p class="form-control-plaintext" th:text="${product.origin}"></p>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">전체 사용 원료</label>
+      <p class="form-control-plaintext" th:text="${product.all_rawmaterial}"></p>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">영양성분</label>
+      <p class="form-control-plaintext" th:text="${product.ingredient}"></p>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">칼로리</label>
+      <p class="form-control-plaintext" th:text="${product.calories}"></p>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">실 중량</label>
+      <p class="form-control-plaintext" th:text="${product.weight}"></p>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">연령대</label>
+      <p class="form-control-plaintext" th:text="${product.age_group}"></p>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">기능</label>
+      <p class="form-control-plaintext" th:text="${product.function}"></p>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">알러지 목록</label>
+      <p class="form-control-plaintext d-flex flex-column">
+        <span th:each="allergy : ${allergies}" th:text="${allergy}"></span>
+      </p>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">병명 목록</label>
+      <p class="form-control-plaintext d-flex flex-column">
+        <span th:each="disease : ${diseases}" th:text="${disease}"></span>
+      </p>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">대표 이미지</label>
+      <div>
+        <img th:src="${product.main_image_url}" alt="대표 이미지" style="width: 200px; height: auto;">
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">추가 이미지</label>
+      <div th:each="image : ${imageUrls}">
+        <img th:src="${image}" alt="상품 이미지" style="width: 100px; height: auto;">
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label class="form-label">세부 이미지</label>
+      <div th:each="detailImage : ${imageDetailUrls}">
+        <img th:src="${detailImage}" alt="세부 이미지" style="width: 100px; height: auto;">
+      </div>
+    </div>
+
+    <a href="#" th:href="@{/admin/product/edit/{id}(id=${product.id})}" class="btn btn-primary">수정 하기</a>
+    <a href="#" th:href="@{/admin/product}" class="btn btn-secondary">목록으로 돌아가기</a>
+  </div>
+</div>
+
+</body>
+</html>
