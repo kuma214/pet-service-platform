@@ -14,24 +14,28 @@
 - **협업**: Git, Notion, Figma
 
 ## 주요 기능
-**회원**: 회원가입, 로그인, JWT 기반 인증/인가
-**상품**: 상품 등록/수정/삭제, 상품 추천 기능
-**주문**: 주문 등록, 배송 상태 관리
-**관리자**: 상품 관리, 주문/배송 모니터링
-**기타**: 알러지 필터링, 반려동물 프로필 기반 추천
+- **회원**: 회원가입, 로그인, JWT 기반 인증/인가
+- **상품**: 상품 등록/수정/삭제, 상품 추천 기능
+- **주문**: 주문 등록, 배송 상태 관리
+- **관리자**: 상품 관리, 주문/배송 모니터링
+- **기타**: 알러지 필터링, 반려동물 프로필 기반 추천
 
 ## 시연 영상 및 결과
 
 ## ERD & API 명세
+![ERD](./images/ERD_petService.jpg)
 
-## 프로젝트 구조
+## 📁 프로젝트 구조
+
 ```bash
 pet-service-platform/
 ├── admin/
-│   └── backend/              # 관리자 백엔드 (Spring Boot + Thymeleaf)
+│   ├── backend/           # 관리자 백엔드 (Spring Boot + Thymeleaf)
+│   └── frontend/          # (간단한 관리자 화면, 선택 사항)
 ├── service/
-│   ├── backend/              # 사용자 서비스 백엔드 (Spring Boot)
-│   └── frontend/             # 사용자 프론트 (Vue.js)
-├── docs/                     # 발표자료, ERD 등 문서 모음
-├── images/                   # 서비스 캡처 이미지 모음
-└── README.md                 # 프로젝트 소개 문서
+│   ├── backend/           # 사용자 백엔드 (Spring Boot)
+│   └── frontend/          # 사용자 프론트엔드 (Vue.js)
+├── docs/                  # 발표 자료 등 문서
+│   └── presentation.pptx
+├── images/                # 서비스 화면 및 ERD 이미지
+└── README.md
