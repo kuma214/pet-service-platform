@@ -21,6 +21,30 @@
 - **기타**: 알러지 필터링, 반려동물 프로필 기반 추천
 
 ## 시연 영상 및 결과
+![시연](./images/image (1).jpg)
+![시연](./images/image (2).jpg)
+![시연](./images/image (3).jpg)
+![시연](./images/image (4).jpg)
+![시연](./images/image (5).jpg)
+![시연](./images/image (6).jpg)
+![시연](./images/image (7).jpg)
+![시연](./images/image (8).jpg)
+![시연](./images/image (9).jpg)
+![시연](./images/image (10).jpg)
+![시연](./images/image (11).jpg)
+![시연](./images/image (12).jpg)
+![시연](./images/image (13).jpg)
+![시연](./images/image (14).jpg)
+![시연](./images/image (15).jpg)
+![시연](./images/image (16).jpg)
+![시연](./images/image (17).jpg)
+![시연](./images/image (18).jpg)
+![시연](./images/image (19).jpg)
+![시연](./images/image (20).jpg)
+![시연](./images/image (21).jpg)
+![시연](./images/image (22).jpg)
+![시연](./images/image (23).jpg)
+![시연](./images/image (24).jpg)
 
 ## ERD & API 명세
 ![ERD](./images/ERD_petService.jpg)
